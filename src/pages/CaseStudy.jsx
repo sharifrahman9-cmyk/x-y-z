@@ -1,82 +1,128 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
+import { ArrowLeft, CheckCircle, Zap, Target, BarChart2 } from "lucide-react";
 
 const CaseStudy = () => {
   const caseStudyData = {
-    title: "Project Phoenix: Revamping User Experience",
+    title: "SaaS Landing Page",
     description:
-      "A comprehensive case study on how we transformed a struggling e-commerce platform into a user-friendly and profitable business.",
-    imageUrl: "/projects/project1.png",
-    content: [
-      "Introduction: Project Phoenix was initiated to address the declining user engagement and conversion rates of ShopSphere, an online retail platform.",
-      "Challenges: The existing platform suffered from poor navigation, a cluttered interface, and a slow loading speed.",
-      "Solutions: We implemented a complete redesign, focusing on intuitive navigation, a clean and modern UI, and performance optimization.",
-      "Results: Within three months, user engagement increased by 150%, conversion rates doubled, and customer satisfaction scores soared.",
+      "A comprehensive case study on the development of a high-converting SaaS landing page using React and Tailwind CSS.",
+    imageUrl: "/projects/project1.png", // Using the same image as in ProjectsSection
+    client: "Innovate Inc.",
+    industry: "Software as a Service (SaaS)",
+    duration: "3 Weeks",
+    summary:
+      "The primary goal was to create a visually appealing and highly performant landing page to drive user sign-ups for a new SaaS product. The project involved translating Figma designs into a fully responsive React application, integrating with a Supabase backend for lead capture.",
+    challenges: [
+      "Pixel-perfect implementation of a complex, modern design.",
+      "Ensuring fast load times and a high Google PageSpeed score.",
+      "Creating reusable and maintainable React components.",
+      "Seamless integration with the backend for the email signup form.",
     ],
+    solutions: [
+      "Utilized Tailwind CSS for rapid and precise UI development, matching the Figma designs.",
+      "Implemented performance optimization techniques such as lazy loading images and code splitting.",
+      "Built a modular component library in React for consistency and reusability.",
+      "Used React Hook Form for form state management and validation, connected to a Supabase backend via API.",
+    ],
+    results: [
+      "Achieved a 45% increase in user sign-ups in the first month.",
+      "Google PageSpeed score improved from 65 to 98.",
+      "Reduced bounce rate by 30% due to improved performance and UX.",
+    ],
+    techStack: ["React", "Tailwind CSS", "Supabase", "Vite", "Figma"],
   };
+
   return (
-    <div className="container mx-auto py-12 px-4 max-w-3xl">
-      <h2 className="text-3xl font-bold text-gray-800 mb-6">
-        {caseStudyData.title}
-      </h2>
-      <img
-        src={caseStudyData.imageUrl}
-        alt="Project Preview"
-        className="rounded-lg shadow-md mb-6"
-      />
-      <p className="text-gray-700 leading-relaxed mb-4">
-        {caseStudyData.description}
-      </p>
-      <div>
-        <h2> Case Study: E-commerce Website Development Project.</h2>
-        <h4>
-          Title: [Name of the E-commerce Platform/Store, e.g., "The Gourmet
-          Pantry Online Store"]
-        </h4>
-        <h3>Client: [Client Company Name, e.g., "Gourmet Foods Inc."]</h3>
-        <h3>Industry: [Industry, e.g., Specialty Food Retail]</h3>
-        <h3>Duration: [Start Date] – [Completion Date] (e.g., 6 Months) </h3>
-        <ul>1. Executive Summary </ul>
-        <p>
-          A brief overview of the project, the client's main challenge, the
-          solution provided (the new website), and the key results achieved.
+    <div className="bg-background text-foreground min-h-screen">
+      <div className="container mx-auto py-16 px-4 max-w-4xl">
+        <NavLink
+          to="/#projects"
+          className="inline-flex items-center gap-2 text-primary hover:underline mb-8"
+        >
+          <ArrowLeft size={18} />
+          Back to Projects
+        </NavLink>
+
+        <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          {caseStudyData.title}
+        </h1>
+        <p className="text-lg text-muted-foreground mb-8">
+          {caseStudyData.description}
         </p>
-        Goal: To migrate the client from a dated, limited legacy platform to a
-        scalable, modern e-commerce solution to support planned business
-        expansion and improve customer experience. Result Snapshot: [e.g., 45%
-        increase in online sales within the first quarter; 20% reduction in
-        customer service calls related to ordering; 35% faster page load time.]
-        2. The Client & The Challenge 2.1. The Client Background Brief
-        description of the client's business, market position, and existing
-        customer base. Example: Gourmet Foods Inc. is a local retailer
-        specializing in high-end, imported culinary products with three physical
-        locations. They had a small online presence using a proprietary platform
-        built in 2010. 2.2. The Problem/Challenge What were the specific pain
-        points that necessitated the new website? Technical: Slow loading
-        speeds, frequent downtime, lack of mobile responsiveness, inability to
-        integrate with current inventory system. Business: High cart abandonment
-        rate (e.g., 65%), inability to offer tiered pricing or subscription
-        models, lack of robust analytics, limiting growth potential. User
-        Experience (UX): Confusing checkout process, difficult product
-        discovery, poor search functionality. 3. The Solution & Development
-        Process 3.1. Project Goals & Strategy Primary Goals: Design and develop
-        a user-friendly, mobile-responsive e-commerce platform. Integrate a
-        real-time inventory management system (IMS) and ERP. Implement a secure,
-        multi-step checkout process with multiple payment options. Improve SEO
-        and overall site performance. Platform/Technology Stack Selection:
-        Example: Platform: Shopify Plus / Adobe Commerce (Magento) / Custom
-        build with React & Node.js Database: PostgreSQL / MongoDB Payment
-        Gateway: Stripe / PayPal / Apple Pay CMS: Headless (if applicable) 3.2.
-        Key Solution Features Implemented UX/UI Focus: Intuitive navigation,
-        one-page or three-step checkout, high-quality product photography
-        implementation, and robust filtering options. Integrations: Integration
-        with [ERP/IMS Name] for real-time stock updates. Integration with
-        [Shipping Carrier API] for dynamic rate calculation. Marketing Tools:
-        Implementation of an abandoned cart recovery email sequence,
-        personalized product recommendations (AI-driven), and customer loyalty
-        program integration. Performance: Optimization for Core Web Vitals (LCP,
-        FID, CLS) and CDN implementation for global speed. 3.3. Development
-        Methodology What development process was used? (e.g., Agile Scrum with
-        bi-weekly sprints, Waterfall)
+
+        <img
+          src={caseStudyData.imageUrl}
+          alt="Project Preview"
+          className="rounded-xl shadow-lg mb-12 w-full"
+        />
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 text-center">
+          <div>
+            <h4 className="font-semibold text-muted-foreground text-sm uppercase tracking-wider">
+              Client
+            </h4>
+            <p className="text-lg">{caseStudyData.client}</p>
+          </div>
+          <div>
+            <h4 className="font-semibold text-muted-foreground text-sm uppercase tracking-wider">
+              Industry
+            </h4>
+            <p className="text-lg">{caseStudyData.industry}</p>
+          </div>
+          <div>
+            <h4 className="font-semibold text-muted-foreground text-sm uppercase tracking-wider">
+              Duration
+            </h4>
+            <p className="text-lg">{caseStudyData.duration}</p>
+          </div>
+        </div>
+
+        <div className="prose prose-lg max-w-none mx-auto">
+          <h2 className="flex items-center gap-3">
+            <Target className="text-primary" /> Project Summary
+          </h2>
+          <p>{caseStudyData.summary}</p>
+
+          <h2 className="flex items-center gap-3">
+            <Zap className="text-primary" /> Challenges
+          </h2>
+          <ul>
+            {caseStudyData.challenges.map((item, i) => (
+              <li key={i}>{item}</li>
+            ))}
+          </ul>
+
+          <h2 className="flex items-center gap-3">
+            <CheckCircle className="text-primary" /> Solutions
+          </h2>
+          <ul>
+            {caseStudyData.solutions.map((item, i) => (
+              <li key={i}>{item}</li>
+            ))}
+          </ul>
+
+          <h2 className="flex items-center gap-3">
+            <BarChart2 className="text-primary" /> Results
+          </h2>
+          <ul>
+            {caseStudyData.results.map((item, i) => (
+              <li key={i}>{item}</li>
+            ))}
+          </ul>
+
+          <h2>Tech Stack</h2>
+          <div className="flex flex-wrap gap-3">
+            {caseStudyData.techStack.map((tech) => (
+              <span
+                key={tech}
+                className="bg-secondary text-secondary-foreground font-medium px-4 py-2 rounded-full"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );

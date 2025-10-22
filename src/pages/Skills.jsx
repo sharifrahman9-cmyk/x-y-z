@@ -70,7 +70,7 @@ const Skills = () => {
                 {categoryItem.skills.map((skill, i) => (
                   <li
                     key={i}
-                    className="bg-secondary bg-gray-200 text-secondary-foreground text-sm font-medium px-3 py-1.5 rounded-full"
+                    className="bg-secondary text-secondary-foreground text-sm font-medium px-3 py-1.5 rounded-full"
                   >
                     {skill}
                   </li>
