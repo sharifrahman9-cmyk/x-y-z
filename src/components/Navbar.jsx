@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 
 const navItems = [
-  { name: "Case Study", href: "/case-study" },
+  { name: "Case Study", href: "/CaseStudy" },
   { name: "About", href: "/about" },
   { name: "Skills", href: "/skills" },
   { name: "Projects", href: "/projects" },
@@ -31,14 +31,15 @@ export const Navbar = () => {
       )}
     >
       <div className="container flex items-center justify-between">
-        <a
+        <NavLink
+          to="/"
           className="text-xl font-bold text-primary flex items-center"
           href="#hero"
         >
           <span className="relative z-10">
             <span className="text-glow text-foreground"> X/Y/Z </span> WEB_DEV
           </span>
-        </a>
+        </NavLink>
 
         {/* desktop nav */}
         <div className="hidden md:flex space-x-8">
@@ -57,7 +58,7 @@ export const Navbar = () => {
 
         <button
           onClick={() => setIsMenuOpen((prev) => !prev)}
-          className="md:hidden p-2 text-foreground z-50"
+          className="md:hidden p-2 mx-4 text-foreground z-50"
           aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
         >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}{" "}

@@ -1,4 +1,5 @@
 import { ArrowRight, ExternalLink, GitFork } from "lucide-react";
+import { NavLink } from "react-router-dom";
 
 const projects = [
   {
@@ -7,7 +8,7 @@ const projects = [
     description: "A beautiful landing page app using React and Tailwind.",
     image: "/projects/project1.png",
     tags: ["React", "TailwindCSS", "Supabase"],
-    demoUrl: "#",
+    demoUrl: "/CaseStudy",
     githubUrl: "#",
   },
   {
@@ -17,7 +18,7 @@ const projects = [
       "Interactive analytics dashboard with data visualization and filtering capabilities.",
     image: "/projects/project2.png",
     tags: ["TypeScript", "D3.js", "Next.js"],
-    demoUrl: "#",
+    demoUrl: "/Projects",
     githubUrl: "#",
   },
   {
@@ -27,7 +28,7 @@ const projects = [
       "Full-featured e-commerce platform with user authentication and payment processing.",
     image: "/projects/project3.png",
     tags: ["React", "Node.js", "Stripe"],
-    demoUrl: "#",
+    demoUrl: "/Projects",
     githubUrl: "#",
   },
 ];
@@ -37,7 +38,6 @@ export const ProjectsSection = () => {
     <section id="projects" className="py-24 px-4 relative">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
-          {" "}
           Featured <span className="text-primary"> Projects </span>
         </h2>
 
@@ -69,26 +69,26 @@ export const ProjectsSection = () => {
                   ))}
                 </div>
 
-                <h3 className="text-xl font-semibold mb-1"> {project.title}</h3>
+                <h3 className="text-xl font-semibold mb-1">{project.title}</h3>
                 <p className="text-muted-foreground text-sm mb-4">
                   {project.description}
                 </p>
                 <div className="flex justify-between items-center">
                   <div className="flex space-x-3">
-                    <a
-                      href={project.demoUrl}
+                    <NavLink
+                      to={project.demoUrl}
                       target="_blank"
                       className="text-foreground/80 hover:text-primary transition-colors duration-300"
                     >
                       <ExternalLink size={20} />
-                    </a>
-                    <a
-                      href={project.githubUrl}
+                    </NavLink>
+                    <NavLink
+                      to={project.githubUrl}
                       target="_blank"
                       className="text-foreground/80 hover:text-primary transition-colors duration-300"
                     >
                       <GitFork size={20} />
-                    </a>
+                    </NavLink>
                   </div>
                 </div>
               </div>
