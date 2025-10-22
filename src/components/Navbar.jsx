@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 
 const navItems = [
-  { name: "Case Study", href: "/CaseStudy" },
+  { name: "CaseStudy", href: "/casestudy" },
   { name: "About", href: "/about" },
   { name: "Skills", href: "/skills" },
   { name: "Projects", href: "/projects" },

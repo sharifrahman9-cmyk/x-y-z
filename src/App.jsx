@@ -1,11 +1,11 @@
 import { BrowserRouter, Routes, Route } from "react-router";
 import Root from "@/Root";
 import NotFound from "@/NotFound";
-import About from "./About";
-import Projects from "./Projects";
+import About from "@/About";
+import Projects from "@/Projects";
 import { Contact } from "lucide-react";
-import Skills from "./Skills";
-import CaseStudy from "./CaseStudy";
+import Skills from "@/Skills";
+import CaseStudy from "@/CaseStudy";
 import { ThemeToggle } from "./components/ThemeToggle";
 import { Navbar } from "./components/Navbar";
 
@@ -18,7 +18,7 @@ function App() {
         <main>
           <Routes>
             <Route index element={<Root />} />
-            <Route path="/about" element={<About />} />
+            <Route path="/About" element={<About />} />
             <Route path="/CaseStudy" element={<CaseStudy />} />
             <Route path="/Projects" element={<Projects />} />
             <Route path="/Contact" element={<Contact />} />
