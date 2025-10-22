@@ -1,13 +1,11 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router";
-import Root from "@/pages/Root";
-import NotFound from "@/pages/NotFound";
-import About from "./pages/About";
-import Projects from "./pages/Projects";
+import Root from "@/Root";
+import NotFound from "@/NotFound";
+import About from "./About";
+import Projects from "./Projects";
 import { Contact } from "lucide-react";
-import Skills from "./pages/Skills";
-import CaseStudy from "./pages/CaseStudy";
+import Skills from "./Skills";
+import CaseStudy from "./CaseStudy";
 import { ThemeToggle } from "./components/ThemeToggle";
 import { Navbar } from "./components/Navbar";
 

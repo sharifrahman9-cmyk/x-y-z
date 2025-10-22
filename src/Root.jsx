@@ -1,5 +1,5 @@
-import { AboutSection } from "../components/AboutSection";
-import { ProjectsSection } from "../components/ProjectsSection";
+import { AboutSection } from "./components/AboutSection";
+import { ProjectsSection } from "./components/ProjectsSection";
 
 export const Root = () => {
   return (
