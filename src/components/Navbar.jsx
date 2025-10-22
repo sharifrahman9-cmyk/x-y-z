@@ -1,9 +1,10 @@
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 
 const navItems = [
-  { name: "Case Study", href: "/hero" },
+  { name: "Case Study", href: "/case-study" },
   { name: "About", href: "/about" },
   { name: "Skills", href: "/skills" },
   { name: "Projects", href: "/projects" },
@@ -73,14 +74,14 @@ export const Navbar = () => {
         >
           <div className="flex flex-col space-y-8 text-xl">
             {navItems.map((item, key) => (
-              <a
+              <NavLink
+                to="{item.href}"
                 key={key}
-                href={item.href}
                 className="text-foreground/80 hover:text-primary transition-colors duration-300"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}
-              </a>
+              </NavLink>
             ))}
           </div>
         </div>
