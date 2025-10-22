@@ -1,28 +1,3 @@
 {
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/about",
-      "destination": "/About.jsx"
-    },
-    {
-      "source": "/CaseStudy",
-      "destination": "/CaseStudy.jsx"
-    },
-    {
-      "source": "/projects",
-      "destination": "/Projects.jsx"
-    },
-    {
-      "source": "/skills",
-      "destination": "/Skills.jsx"
-    },
-    {
-      "source": "/contact",
-      "destination": "/Contact.jsx"
-    }
-  ]
+  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
 }
