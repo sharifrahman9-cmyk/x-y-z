@@ -6,23 +6,23 @@
     },
     {
       "source": "/about",
-      "destination": "/About.html"
+      "destination": "/About.jsx"
     },
     {
       "source": "/CaseStudy",
-      "destination": "/caseStudy.html"
+      "destination": "/CaseStudy.jsx"
     },
     {
       "source": "/projects",
-      "destination": "/projects.html"
+      "destination": "/Projects.jsx"
     },
     {
       "source": "/skills",
-      "destination": "/skills.html"
+      "destination": "/Skills.jsx"
     },
     {
       "source": "/contact",
-      "destination": "/contact.html"
+      "destination": "/Contact.jsx"
     }
   ]
 }
