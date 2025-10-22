@@ -7,10 +7,26 @@
           {
             "source": "/(.*)",
             "destination": "/index.html"
-          }
+          },
           {
             "source": "/about",
-            "destination": "/about.html"
-          }
+            "destination": "/About.jsx"
+          },
+          {
+            "source": "/contact",
+            "destination": "/Contact.jsx"
+          },
+          {
+            "source": "/projects",
+            "destination": "/Projects.jsx"
+          },
+          {
+            "source": "/skills",
+            "destination": "/Skills.jsx"
+          },
+            {
+                "source": "/casestudy",
+                "destination": "/CaseStudy.jsx"
+            }
     ]
     }
